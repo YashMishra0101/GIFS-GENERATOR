@@ -6,7 +6,7 @@
 
 This project is a practice project created for learning purposes, with a primary focus on React. It uses HTML, Tailwind CSS, React, React Router, and Axios for API handling. The project consists of two main pages: one for generating random GIFs and another for creating custom GIFs based on user input
 
-The project features two main pages:
+## The project features two main pages:
 
 1. **Random GIF Generator:** This page displays a random GIF fetched from an external API. It demonstrates making an API call and rendering the result.
 
@@ -14,7 +14,7 @@ The project features two main pages:
 
 ## 🌐 Project Demo 
 
-To see a live demo of the project, please visit :
+To see a live demo of the project, please visit : https://gifs-generator-yashmishra.vercel.app/
 
 ## Technologies Used
 

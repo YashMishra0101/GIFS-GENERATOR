@@ -39,7 +39,7 @@ function App() {
       <Navbar fetchData={fetchData} setCustomName={setCustomName} /> 
        <main>
         <Routes>
-          <Route path="/" element={<CustomGifs />} />
+          <Route path="/" element={<RandonGifs image={image} spinner={spinner} fetchData={fetchData}/>} />
           <Route path="/randomGifs" element={<RandonGifs image={image} spinner={spinner} fetchData={fetchData}/>}/>
           <Route path="/customGifs" element={<CustomGifs image={image} spinner={spinner} fetchData={fetchData} setCustomName={setCustomName}  />} />
           <Route path="/*" element={<RandonGifs image={image} spinner={spinner} fetchData={fetchData}/>} />
