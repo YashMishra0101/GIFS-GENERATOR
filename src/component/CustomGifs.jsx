@@ -26,7 +26,7 @@ function CustomGifs({ image, spinner, fetchData, setCustomName }) {
         ) : (
           <img
             src={image}
-            alt="Random GIF"
+            alt="Custom GIF Image Issue"
             className="object-cover aspect-w-16 aspect-h-9 select-none rounded-md max-w-full sm:max-w-[90%] max-h-[75%] sm:max-h-[90%] my-auto"
           />
         )}

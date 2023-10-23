@@ -5,23 +5,27 @@ import Navbar from "./component/Navbar";
 import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "react-hot-toast";
 
 function App() {
   const [image, setImage] = useState("");
   const [spinner, setSpinner] = useState(true);
   const [customName,setCustomName]=useState('')
-  const API_KEY = import.meta.env.VITE_API_GIFS_API_KEY;
+  const API_KEY = import.meta.env.VITE_GIFS_API_KEY;
   const API_URL = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=${customName}&rating=g`;
 
-    async function fetchData() {
+    const fetchData=async()=>{
       setSpinner(true);
       try {
         const fetch = await axios.get(API_URL);
         const response = fetch.data.data.images.downsized_large.url;
         setImage(response);
+        console.log(response);
         setSpinner(false);
-      } catch (error) {
+      } 
+      catch (error) {
         console.error(error);
+        toast.error("API fetch failed. Try later 😵‍💫");
         setSpinner(false);
       }
     }
