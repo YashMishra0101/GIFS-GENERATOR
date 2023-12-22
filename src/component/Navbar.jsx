@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar({ fetchData,setCustomName }) {
   
@@ -12,15 +12,15 @@ const customHandler=(event)=>{
       <nav>
         <ul className="md:flex font-serif text-2xl gap-28 mt-10 text-amber-700">
          <div>
-         <Link to="/randonGifs">
+         <NavLink to="/randonGifs">
             <li onClick={()=>setCustomName("")}>Random Gifs</li>
-          </Link>
+          </NavLink>
          </div>
 
           <div className="mt-4  sm:mt-0">
-          <Link to="/customGifs" onClick={customHandler} >
+          <NavLink to="/customGifs" onClick={customHandler} >
             <li>Custom Gifs</li> 
-          </Link>
+          </NavLink>
           </div>
         </ul>
       </nav>
